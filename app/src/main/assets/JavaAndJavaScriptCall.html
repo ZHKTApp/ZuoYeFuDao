@@ -1,0 +1,76 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <script type="text/javascript">
+   <!--(function javaCallJs(arg){-->
+    <!--var video, output;-->
+    <!--var scale = 0.8;-->
+    <!--var initialize = function() {-->
+    <!--output = document.getElementById("output");-->
+    <!--video = document.getElementById("videoJs");-->
+    <!--video.src(arg);-->
+    <!--video.addEventListener('loadeddata',captureImage);-->
+    <!--};-->
+
+    <!--var captureImage = function() {-->
+            <!--var canvas = document.createElement("canvas");-->
+            <!--canvas.width = video.videoWidth * scale;-->
+            <!--canvas.height = video.videoHeight * scale;-->
+            <!--canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);-->
+
+            <!--var img = document.createElement("img");-->
+            <!--img.src = canvas.toDataURL("image/png");-->
+            <!--output.appendChild(img);-->
+    <!--};-->
+
+    <!--initialize();-->
+    <!--})();-->
+
+
+
+
+    function javaCallJs(arg){
+        var video, output;
+        var scale = 0.8;
+        var initialize = function() {
+        output = document.getElementById("output");
+        video = document.getElementById("videoJS");
+        video.src= arg;
+        <!--video.setAttribute("src",arg);-->
+        video.addEventListener('loadeddata',captureImage);
+        };
+        var captureImage = function() {
+                var canvas = document.createElement("canvas");
+                canvas.width = video.videoWidth * scale;
+                canvas.height = video.videoHeight * scale;
+                canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+                var img = document.createElement("img");
+                img.src = canvas.toDataURL("image/png");
+                img.width=1000px;
+                img.height=380px
+                output.appendChild(img);
+        };
+        initialize();
+            <!--var video=document.getElementById("videoJs");-->
+            <!--video.src(arg);-->
+            <!--video.setAttribute("src",arg);-->
+            <!--video.load();-->
+           <!--var video = document.getElementById("videoJS").src(arg);-->
+            <!--var scale =0.8;-->
+           <!--video.on("loadeddata", function () {//加载完成事件，调用函数-->
+            <!--var canvas = document.createElement("canvas");//canvas画布-->
+            <!--canvas.width = video.videoWidth * scale;-->
+            <!--canvas.height = video.videoHeight * scale;-->
+            <!--canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);//画图-->
+            <!--video.setAttribute("poster", canvas.toDataURL("image/png"));//关键一步 —— 设置标签的 poster 属性的值为 base64 编译过后的canvas绘图。-->
+            <!--})-->
+            <!--};-->
+    }
+    </script>
+</head>
+    <body>
+    <video id="videoJS" autoplay="autoplay"
+           width="1000px" height="380px" preload="auto" src=""></video>
+    <div id="output" height="380px"></div>
+    </body>
+</html>

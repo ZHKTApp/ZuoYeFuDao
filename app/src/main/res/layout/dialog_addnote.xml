@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/drawable_white_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dialog_width"
+        android:layout_height="@dimen/dialog_height"
+        android:background="@drawable/drawable_white_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_dialog_title"
+            style="@style/text_16_wrap"
+            android:layout_centerHorizontal="true"
+            android:text="加入原因" />
+
+        <ImageView
+            android:id="@+id/tv_dialog_close"
+            android:layout_width="@dimen/common_margin_18dp"
+            android:layout_height="@dimen/common_margin_18dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/common_margin_15dp"
+            android:background="@mipmap/close" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialog_common_height"
+        android:layout_margin="@dimen/common_margin_5dp"
+        android:background="@drawable/frame_black_bg_white"
+        android:padding="0.5dp">
+
+        <EditText
+            android:id="@+id/et_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/common_margin_5dp"
+            android:background="@null"
+            android:gravity="left|top"
+            android:padding="@dimen/common_margin_5dp" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_margin_20dp">
+
+        <TextView
+            android:id="@+id/tv_dialog_cancle"
+            android:layout_width="222dp"
+            android:layout_height="@dimen/common_margin_28dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="121dp"
+            android:background="@drawable/drawable_green_bg"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_dialog_save"
+            android:layout_width="222dp"
+            android:layout_height="@dimen/common_margin_28dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:layout_marginRight="121dp"
+            android:background="@drawable/drawable_green_bg"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</LinearLayout>

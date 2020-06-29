@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_subjectwrite">
+
+    <include
+        android:id="@+id/include_top"
+        layout="@layout/radiogroup_top_write" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_photo"
+                android:layout_width="640dp"
+                android:layout_height="480dp"
+                android:layout_centerInParent="true"
+                android:background="@mipmap/textbook"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/ed_content"
+                android:layout_width="match_parent"
+                android:layout_height="800dp"
+                android:gravity="top"
+                android:visibility="gone" />
+
+            <com.zwyl.homeworkhelp.customveiw.PaletteView
+                android:id="@+id/palette_write"
+                android:layout_width="match_parent"
+                android:layout_height="1600dp"
+                android:background="@mipmap/bg" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/include_bottom"
+        layout="@layout/radiogroup_bottom_write" />
+</LinearLayout>

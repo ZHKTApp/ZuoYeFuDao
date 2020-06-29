@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/drawable_white_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dialog_width"
+        android:layout_height="@dimen/dialog_height"
+        android:background="@drawable/drawable_white_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_dialog_title"
+            style="@style/text_16_wrap"
+            android:layout_centerHorizontal="true"
+            android:text="笔记" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialog_common_height"
+        android:background="@drawable/frame_black_bg_white"
+        android:scrollbarSize="3dp"
+        android:scrollbarThumbVertical="@color/c_green"
+        android:scrollbars="vertical"
+        android:layout_margin="@dimen/common_margin_10dp"
+        android:padding="0.5dp">
+
+        <WebView
+            android:id="@+id/webView_participation_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="WebViewLayout"
+            android:layout_margin="0.5dp"/>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_dialog_cancle"
+        android:layout_width="96dp"
+        android:layout_height="@dimen/common_margin_28dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/common_margin_20dp"
+        android:background="@drawable/drawable_green_bg"
+        android:gravity="center"
+        android:text="关闭"
+        android:textSize="20sp"
+        android:textColor="@color/white" />
+</LinearLayout>

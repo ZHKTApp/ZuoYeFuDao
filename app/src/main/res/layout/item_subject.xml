@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/bg_item"
+    android:orientation="vertical"
+    android:padding="1dp">
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/common_margin_47dp"-->
+    <!--android:gravity="center">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_item_subject_type"-->
+    <!--style="@style/text_18_wrap"-->
+    <!--android:layout_marginLeft="17dp"-->
+    <!--android:text="1.单选题" />-->
+
+    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/tv_item_subject_name"&ndash;&gt;-->
+    <!--&lt;!&ndash;style="@style/text_18_wrap"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_marginLeft="@dimen/common_margin_28dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_toRightOf="@id/tv_item_subject_type"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:text="2018高一数学" />&ndash;&gt;-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_item_teacher_name"-->
+    <!--style="@style/text_18_wrap"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_marginEnd="85dp"-->
+    <!--android:text="老师 " />-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_item_subject_time"-->
+    <!--style="@style/text_18_wrap"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_marginRight="@dimen/common_margin_18dp"-->
+    <!--android:text="时间 " />-->
+    <!--</RelativeLayout>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_margin_38dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_item_subject_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:text="1.单选题"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_18sp" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_item_subject_name"-->
+        <!--style="@style/text_18_wrap"-->
+        <!--android:layout_marginLeft="@dimen/common_margin_28dp"-->
+        <!--android:layout_toRightOf="@id/tv_item_subject_type"-->
+        <!--android:text="2018高一数学" />-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4" />
+
+        <TextView
+            android:id="@+id/tv_item_teacher_name"
+            style="@style/text_16"
+            android:text="老师 " />
+
+        <TextView
+            android:id="@+id/tv_item_subject_time"
+            style="@style/text_16"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="12dp"
+            android:text="时间 " />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_CBCBCB" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:padding="0.5dp">
+
+        <WebView
+            android:id="@+id/webView_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="WebViewLayout"></WebView>
+
+        <ImageView
+            android:id="@+id/iv_item_subject"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin_12dp"
+            android:visibility="gone" />
+
+        <VideoView
+            android:id="@+id/video_item_subject"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin_20dp"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/fl_item_button"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/common_margin_20dp">
+
+            <ImageView
+                android:id="@+id/iv_item_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/pause"
+                android:visibility="gone" />
+        </FrameLayout>
+
+    </FrameLayout>
+    <!--<ImageView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@mipmap/textbook" />-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_CBCBCB" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_margin_47dp"
+        android:gravity="center"
+        android:paddingLeft="@dimen/common_margin_17dp">
+
+        <LinearLayout
+            android:id="@+id/ll_item_subject_listen"
+            style="@style/ll_bg_grayorgreen_style">
+
+            <ImageView
+                android:layout_width="@dimen/common_margin_18dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="@dimen/common_margin_12dp"
+                android:background="@mipmap/listen" />
+
+            <TextView
+                style="@style/text_18_wrap"
+                android:layout_marginLeft="3dp"
+                android:text="听讲解"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_item_subject_look"
+            style="@style/ll_bg_grayorgreen_style"
+            android:layout_marginLeft="33dp"
+            android:layout_toRightOf="@id/ll_item_subject_listen">
+
+            <ImageView
+                android:layout_width="@dimen/common_margin_18dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="@dimen/common_margin_12dp"
+                android:background="@mipmap/look" />
+
+            <TextView
+                style="@style/text_18_wrap"
+                android:layout_marginLeft="3dp"
+                android:text="看解析"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:id="@+id/ll_item_subject_addFalse"
+            style="@style/ll_bg_grayorgreen_style"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="137dp">
+
+            <ImageView
+                android:id="@+id/iv_item_subject_false"
+                android:layout_width="@dimen/common_margin_18dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="@dimen/common_margin_12dp"
+                android:background="@mipmap/addfalse" />
+
+            <TextView
+                style="@style/text_18_wrap"
+                android:layout_marginLeft="3dp"
+                android:text="错题集"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_item_subject_down"
+            style="@style/ll_bg_grayorgreen_style"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/common_margin_17dp"
+            android:background="@drawable/drawable_green_bg">
+
+            <ImageView
+                android:layout_width="@dimen/common_margin_18dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="@dimen/common_margin_12dp"
+                android:background="@mipmap/down" />
+
+            <TextView
+                android:id="@+id/tv_item_subject_down"
+                style="@style/text_18_wrap"
+                android:layout_marginLeft="3dp"
+                android:text="下载"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="100dp"
+            android:layout_height="33dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/common_margin_17dp">
+            <com.zwyl.homeworkhelp.util.MyProgress
+                android:id="@+id/progressBar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:progressDrawable="@drawable/drawable_progressbar"
+                android:max="100"
+                android:layout_width="100dp"
+                android:layout_height="33dp"
+                android:visibility="gone"/>
+        </FrameLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

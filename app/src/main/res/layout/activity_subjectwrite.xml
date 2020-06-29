@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_margin_30dp"
+        android:background="@color/gray_efef"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/common_margin_15dp"
+        android:text="1.简答题" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="260dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/textbook" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/ic_answer_edit"
+        layout="@layout/layout_answer_edit"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/ic_myanswer"
+                layout="@layout/layout_answer_subje_show" />
+
+            <include
+                android:id="@+id/ic_analysis"
+                layout="@layout/layout_answer_subje_show" />
+
+            <include
+                android:id="@+id/ic_tureanswer"
+                layout="@layout/layout_answer_subje_show" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

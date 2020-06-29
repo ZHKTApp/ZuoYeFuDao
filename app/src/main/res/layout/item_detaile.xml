@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="153dp"
+    android:background="@color/white"
+    android:layout_marginBottom="@dimen/common_margin_10dp">
+
+    <ImageView
+        android:id="@+id/iv_item_detaile_img"
+        android:layout_width="125dp"
+        android:layout_height="100dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/common_margin_34dp"
+        android:background="@mipmap/file" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="77dp"
+        android:layout_marginTop="@dimen/margin_29dp"
+        android:layout_toRightOf="@id/iv_item_detaile_img"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_item_detaile_name"
+            style="@style/text_18_wrap"
+            android:text="第一节集合导学资料.doc" />
+
+        <TextView
+            android:id="@+id/tv_item_detaile_creatman"
+            style="@style/text_18_wrap"
+            android:layout_marginTop="@dimen/common_margin_17dp"
+            android:text="创建人"
+            android:textColor="@color/gray_8033" />
+
+        <TextView
+            android:id="@+id/tv_item_detaile_starttime"
+            style="@style/text_18_wrap"
+            android:layout_marginTop="@dimen/common_margin_10dp"
+            android:text="截止时间:2019.12.12"
+            android:textColor="@color/gray_8033" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_look"
+        android:layout_width="140dp"
+        android:layout_height="@dimen/common_margin_40dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="81dp"
+        android:background="@drawable/drawable_green_bg"
+        android:gravity="center"
+        android:text="查看"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_18sp" />
+</RelativeLayout>
